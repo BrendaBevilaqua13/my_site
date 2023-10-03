@@ -36,7 +36,7 @@ def post_detail(request, year, month, day, post):
 
 def post_shere(request, post_id):
     post = get_object_or_404(Post, id= post_id, status = 'published')
-    send = False
+    sent = False
     
     if request.method == 'POST':
         form = EmailPostForm(request.POST)
